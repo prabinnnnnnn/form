@@ -28,7 +28,7 @@ function Login() {
       <form className='flex flex-col w-full h-full gap-1' onSubmit={handleSubmit(onSubmt,onError)}>
         <div className='flex flex-col gap-1'>
           <label htmlFor="email">Email address</label>
-          <input type="email" placeholder='example@gmail.com' name="email" autoComplete='true' id="email"
+          <input type="email" placeholder='example@gmail.com' name="email" autoComplete='false' id="email"
             className='p-2 bg-white border rounded-md outline-1 outline-sky-400 invalid:outline-red-600'  {...register('email', {
             required: {
               value: true,
@@ -50,7 +50,7 @@ function Login() {
         
         <div className='relative flex flex-col gap-1'>
           <label htmlFor="password">Password</label>
-          <input type={hidePassword} id='password' name='password'
+          <input type={hidePassword} id='password' name='password' autoComplete='false'
             className='p-2 border rounded-md outline-1 outline-sky-400 invalid:outline-red-500' {...register('password', {
               required: {
                 value: true,
